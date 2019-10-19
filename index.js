@@ -1,4 +1,4 @@
-class StatusError extends Error {
+class ErrDrop extends Error {
 	constructor(message, status) {
 		super(message)
 		this.status = status
@@ -17,11 +17,11 @@ class StatusError extends Error {
 
 for (let [status, name] of Object.entries(require('http').STATUS_CODES)) {
   name = name.replace(/^[A-Za-z]/g, '')
-  StatusError.prototype[name] = message => new StatusError(message, status)
+  ErrDrop.prototype[name] = message => new ErrDrop(message, status)
 }
 
 // convenience aliases
-StatusError.Ok       = StatusError.OK
-StatusError.Internal = StatusError.InternalServerError
+ErrDrop.Ok       = ErrDrop.OK
+ErrDrop.Internal = ErrDrop.InternalServerError
 
-module.exports = StatusError
+module.exports = ErrDrop

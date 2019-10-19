@@ -1,4 +1,4 @@
-# status-error
+# errdrop
 
 A lightweight drop-in `Error` replacement with take-it-or-leave-it HTTP status code support.
 
@@ -8,16 +8,16 @@ Useful for preserving associations between errors and their appropriate HTTP sta
 ## Installation
 ```bash
 # npm
-npm i --save status-error
+npm i --save errdrop
 
 # yarn
-yarn add status-error
+yarn add errdrop
 ```
 
 
 ## Example
 ```js
-const Error = require('status-error')
+const Error = require('errdrop')
 
 // Good practice to decouple application logic
 // from middleware plumbing (req/res)

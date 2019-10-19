@@ -1,5 +1,5 @@
 {
-  "name": "status-error",
+  "name": "errdrop",
   "version": "0.0.1",
   "description": "HTTP status enabled Error class maintaining backward compatibility",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aiwebb/status-error.git"
+    "url": "git+https://github.com/aiwebb/errdrop.git"
   },
   "keywords": [
     "status",
@@ -21,7 +21,7 @@
   "author": "Alex Webb <alexwebb2@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aiwebb/status-error/issues"
+    "url": "https://github.com/aiwebb/errdrop/issues"
   },
-  "homepage": "https://github.com/aiwebb/status-error#readme"
+  "homepage": "https://github.com/aiwebb/errdrop#readme"
 }
