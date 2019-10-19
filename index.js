@@ -16,7 +16,7 @@ class ErrDrop extends Error {
 }
 
 for (let [status, name] of Object.entries(require('http').STATUS_CODES)) {
-  name = name.replace(/^[A-Za-z]/g, '')
+  name = name.replace(/[^A-Za-z]/g, '')
   ErrDrop.prototype[name] = message => new ErrDrop(message, status)
 }
 
