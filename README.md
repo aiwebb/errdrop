@@ -23,7 +23,7 @@ const Error = require('errdrop')
 // from middleware plumbing (req/res)
 function doSomething(options) {
   if (!options.id) {
-    throw Error.BadRequest('missing id')
+    throw new Error.BadRequest('missing id')
   }
 
   return 'done'
