@@ -1,5 +1,11 @@
+const STATUS_CODES = require('http').STATUS_CODES
+
 class ErrDrop extends Error {
 	constructor(message, status) {
+    if (!message && status && STATUS_CODES[status]) {
+      message = STATUS_CODES[status]
+    }
+
 		super(message)
 		this.status = status
   }
@@ -15,7 +21,7 @@ class ErrDrop extends Error {
   }
 }
 
-for (let [status, name] of Object.entries(require('http').STATUS_CODES)) {
+for (let [status, name] of Object.entries(STATUS_CODES)) {
   name = name.replace(/[^A-Za-z]/g, '')
 
   ErrDrop[name] = class extends ErrDrop {
