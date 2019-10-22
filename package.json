@@ -1,6 +1,6 @@
 {
   "name": "errdrop",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "HTTP status enabled Error class maintaining backward compatibility",
   "main": "index.js",
   "scripts": {
